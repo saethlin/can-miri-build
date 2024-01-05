@@ -1,0 +1,13 @@
+name: "Build a sysroot for every target"
+on: push
+#schedule:
+#  - cron: 12 00 * * *
+
+jobs:
+  test:
+    name: "Build the sysroots"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Build the sysroots"
+        run: ./build-all-targets.sh
