@@ -7,6 +7,7 @@ rustup update nightly
 rustup component add --toolchain=nightly miri rust-src
 
 FAILS_DIR=failures
+export MIRI_NO_STD=1
 
 rm -rf $FAILS_DIR
 mkdir $FAILS_DIR
